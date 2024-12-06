@@ -1,16 +1,33 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Header2 from './components/Header/Header2/Header2.jsx'
-import Header1 from './components/Header/Header11/Header1.jsx'
-import Login from './components/Login/Login.jsx'
+import "bootstrap/dist/css/bootstrap.min.css";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+// import App from "./screen/App";
+import LoginMain from "./Login/LoginMain";
+import "./District/screen/assets/css/style.css";
+import "./Subdivision/screen/assets/css/style.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Header1 />
-    <Header2 />
-    {/* <App /> */}
-    <Login />
-  </StrictMode>,
+import "./District/screen/assets/css/responsive.css";
+import "./Subdivision/screen/assets/css/responsive.css";
+
+import DistrictMain from "./District/DistrictMain";
+import SubdivisionMain from "./Subdivision/SubdivisionMain";
+import BlockMain from "./Block/Block";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+
+  <React.StrictMode>
+    <BrowserRouter>
+    <Routes>
+       <Route index element ={<LoginMain />} / >
+       <Route path="/District" element ={<DistrictMain />} / >
+       <Route path="/Subdivision" element ={<SubdivisionMain />} / >
+       <Route path="/Block" element ={<BlockMain />} / >
+
+
+
+
+    </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );

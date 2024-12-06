@@ -1,0 +1,61 @@
+<!-- {tab}
+legend text will metain al-right and marg-r:20px
+first and last child will wrap
+and both metain margin-r:20px and wiht :80% and justify will be end
+side bar will metain width:30%;
+
+
+mobile
+sidebar d-none
+main-100%w
+main-div:100%w
+main:px-2
+sendmoney:x-overflow:scroll -->
+<style>
+  .bottomNav {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1999;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+    height: 80px;
+    width: 100%;
+    background-color: orangered;
+  }
+  .bottomNav div {
+    width: 15%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .mbprofile {
+    background-image: url(/src/screen/assets/images/blackboy.png);
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    /* margin: 2px; */
+  }
+</style>
+
+<div class="d-flex py-3 px-2 justify-content-between bottomNav">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- add  -->
+headerPartern p-3 d-flex justify-content-end align-items-center into partern for
+mobile view then put
+<div class="mbprofile"></div>
+in it or add classfor that

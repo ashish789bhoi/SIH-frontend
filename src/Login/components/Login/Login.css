@@ -1,12 +1,12 @@
 .whole{
     /* margin: 0; */
     margin-top: 50px;
-    position: fixed;
+    /* position: fixed; */
     /* height: 100vh; */
     margin-left: -7px;
     padding: 0;
     background-image: url(/public/images/main.jpg);
-    z-index: -1;
+    /* z-index: -1; */
     background-position: center;
     width: 100%;
 
@@ -17,13 +17,14 @@
 }
 
 .Login-Container{
-    z-index: 100;
+    position: absolute;
+    /* z-index: 100; */
 
     display: flex;
     flex-direction: column;
     /* margin: auto; */
     margin-left: 100px;
-    margin-top: 55px;
+    margin-top: 76px;
     border: 1px solid black;
     background: white;
     /* background-image: url(/public/images/main.jpg); */
