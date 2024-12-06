@@ -9,25 +9,25 @@ function Header2() {
     return (
         <div>
             <nav>
-                <div className='logo' >
-                    <img src='/images/logo-main.png' alt="logo" />
+                <div className="logo" >
+                    <img src="/images/logo-main.png" alt="logo" />
                 </div>
 
-                <div className='search'>
+                <div className="search">
                     <input
                         type="text"
-                        placeholder='Search'
-                        value=''
+                        placeholder="Search"
+                        value=""
                         className="search-input"
                     />
-                    <button className='fa-search'>
+                    <button className="fa-search">
                     <FontAwesomeIcon 
                         icon={faSearch}
                     />
                     </button>
 
                     <div >
-                        <button className='faBell'><FontAwesomeIcon icon={faBell} />What's New</button>
+                        <button className="faBell"><FontAwesomeIcon icon={faBell} />What's New</button>
                     </div>
                 </div>
 
@@ -35,5 +35,4 @@ function Header2() {
         </div>
     )
 }
-
 export default Header2;

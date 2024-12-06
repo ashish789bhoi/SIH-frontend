@@ -13,17 +13,17 @@ function Header1() {
                     <img src='/images/h1logo.png' alt="logo" />
                 </div>
 
-                <div class="Options">
+                <div className="Options">
                     <div className='h1-text'>Skip to main content</div>
-                    <span class="divider"></span>
+                    <span className="divider"></span>
                     <div className='h1-text'>Screen reader access</div>
-                    <span class="divider"></span>
-                    <div class="font-controls">
-                        <button id="increase-font" class="font-btn">A+</button>
-                        <button id="original-font" class="font-btn">A</button>
-                        <button id="decrease-font" class="font-btn">A-</button>
+                    <span className="divider"></span>
+                    <div className="font-controls">
+                        <button id="increase-font" className="font-btn">A+</button>
+                        <button id="original-font" className="font-btn">A</button>
+                        <button id="decrease-font" className="font-btn">A-</button>
                     </div>
-                    <span class="divider"></span>
+                    <span className="divider"></span>
                     <div className="language-selection">
                         <select className="language-dropdown">
                             <option value="english" selected>
