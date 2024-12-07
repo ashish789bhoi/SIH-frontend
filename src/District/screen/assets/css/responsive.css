@@ -1,0 +1,189 @@
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .headerPartern {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .sidebar {
+    display: none;
+  }
+  .main > div {
+   
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 50px;
+  }
+
+  .main div .Maindata {
+    width: 100% !important;
+    flex-direction: column;
+  }
+  .main div .Maindata .first-child {
+    width: 100% !important;
+  }
+  .main div .Maindata .last-child {
+    width: 100% !important;
+  }
+  .styleScrollsend {
+    overflow-x: scroll;
+  }
+  .styleScrollsend::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+
+  .styleScrollsend::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: orangered;
+  }
+  .styleScrollsend::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px orange;
+  }
+  .bottomNav {
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1999;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+    height: 80px;
+    width: 100%;
+    background-color: orangered;
+  }
+  .bottomNav a {
+    width: 15%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .mbprofile {
+    display: flex;
+    background-image: url(/src/screen/assets/images/blackboy.png);
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    /* margin: 2px; */
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .main .legend {
+    text-align: right;
+    margin-right: 20px;
+  }
+  .main > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end !important;
+    width: 65%;
+  }
+  .main div .Maindata {
+    width: 100% !important;
+    flex-direction: column;
+  }
+  .main div .Maindata .first-child {
+    width: 100% !important;
+  }
+  .main div .Maindata .last-child {
+    width: 100% !important;
+  }
+  .styleScrollsend {
+    overflow-x: scroll;
+  }
+  .styleScrollsend::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+
+  .styleScrollsend::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: orangered;
+  }
+  .styleScrollsend::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px orange;
+  }
+  .sidebar {
+    width: 30%;
+  }
+  .sidebar .links {
+    padding-left: 20px;
+  }
+  .sidebar .signOut {
+    padding-left: 20px;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main .legend {
+        text-align: right;
+        margin-right: 20px;
+      }
+      .main > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end !important;
+        width: 65%;
+      }
+      .main div .Maindata {
+        width: 100% !important;
+        flex-direction: column;
+      }
+      .main div .Maindata .first-child {
+        width: 100% !important;
+      }
+      .main div .Maindata .last-child {
+        width: 100% !important;
+      }
+      .styleScrollsend {
+        overflow-x: scroll;
+      }
+      .styleScrollsend::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+      }
+    
+      .styleScrollsend::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: orangered;
+      }
+      .styleScrollsend::-webkit-scrollbar-thumb {
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px orange;
+      }
+      .sidebar {
+        width: 30%;
+      }
+      .sidebar .links {
+        padding-left: 20px;
+      }
+      .sidebar .signOut {
+        padding-left: 20px;
+      }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
