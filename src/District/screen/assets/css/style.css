@@ -1,0 +1,258 @@
+/* root */
+/* reuseClass */
+/* header partern */
+/* sidebar */
+/* Main */
+/* Main firstChild */
+/* Main Balance card */
+/* PaymentLimitChild loading */
+/* Main last-Chaild */
+/* bootom nav */
+/* mobile view rpofile */
+
+/* body{
+  font-family: Matura MT Script Capitals;
+} */
+:root {
+  --black: #000000;
+}
+.styleScrollX {
+  overflow-x: scroll;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: orangered;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px orange;
+}
+
+.headerPartern {
+  width: 100%;
+  height: 15vh;
+  background: url("../images/tobg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidebar {
+  width: 20%;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  border-radius: 20px;
+}
+
+.sidebar > div {
+  width: 70%;
+  text-align: center;
+}
+
+.sidebar .owner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar .owner .logo {
+  background-image: url("../images/uday.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 2px;
+  width: 200px;
+  /* height: 50px; */
+  min-height: 9.5vh;
+}
+
+.sidebar .owner .profile {
+  background-image: url("../images/imageeee.png");
+  background-color: orangered;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 70px;
+  height: 50px;
+  margin: 2px;
+}
+
+.sidebar .owner small {
+  margin-top: 10px;
+  font-size: 22px;
+  color: gray;
+}
+
+.sidebar .owner b {
+  font-size: 25px;
+  color: black;
+}
+
+.sidebar .owner legend {
+  margin-top: 30px;
+  font-size: 25px;
+  
+  font-weight: 500;
+}
+
+.sidebar .owner span {
+  font-size: 30px;
+  font-weight: 700;
+  color: gray;
+}
+
+.sidebar .links {
+  text-align: left;
+  padding-left: 45px;
+}
+
+.sidebar .links > a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: gray;
+  display: flex;
+}
+
+.sidebar .links .active {
+  font-weight: 800;
+  color: black;
+}
+
+.sidebar .links a div {
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+}
+
+.sidebar .signOut {
+  text-align: left;
+  padding-left: 45px;
+}
+
+.sidebar .signOut > a {
+  text-decoration: none;
+  color: gray;
+  display: flex;
+}
+
+.sidebar .signOut a div {
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+}
+
+/* Style for the dropdown wrapper */
+.dropdown {
+  margin: 15px 0;
+}
+
+/* Style for the <select> element */
+.dropdown select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #000; /* Black border for visibility */
+  border-radius: 6px; /* Slightly rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Dark text color */
+  cursor: pointer;
+  outline: none; /* Remove default outline */
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect */
+.dropdown select:hover {
+  border-color: #444; /* Darker border on hover */
+  background-color: #f1f1f1; /* Slightly darker background */
+}
+
+/* Focus effect */
+.dropdown select:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow */
+}
+
+/* Style for the <option> elements */
+.dropdown select option {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #fff; /* Ensure dropdown options have a white background */
+  color: #333; /* Dark text for readability */
+}
+
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main > div {
+  width: 70%;
+}
+.main .legend {
+  font-size: 20px;
+  font-weight: 400;
+}
+.main div .Maindata {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main div .Maindata .first-child {
+  width: 40%;
+}
+
+.dataswitch {
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.dataswitch:active {
+  justify-content: flex-start;
+}
+
+.dataswitchChild {
+  background-color: rgb(202, 195, 195);
+}
+.dataswitchChild:active {
+  background-color: lightgreen;
+}
+.PaymentLimit {
+  background-color: lightgray;
+  height: 5px;
+  width: 100%;
+}
+.PaymentLimitChild {
+  background-color: rgb(44, 43, 43);
+  width: 70%;
+  height: 5px;
+}
+
+.main div .Maindata .last-child {
+  width: 50%;
+  margin-right: 30px;
+}
+.bottomNav {
+  display: none;
+}
+
+.mbprofile {
+  display: none;
+}
