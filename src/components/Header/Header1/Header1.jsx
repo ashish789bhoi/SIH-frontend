@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header1.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
 
 
 function Header1() {

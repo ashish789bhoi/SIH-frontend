@@ -5,7 +5,7 @@
     /* height: 100vh; */
     margin-left: -7px;
     padding: 0;
-    background-image: url(/public/images/main.jpg);
+    background-image: url(/images/main.jpg);
     /* z-index: -1; */
     background-position: center;
     width: 100%;
@@ -22,6 +22,8 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* margin: auto; */
     margin-left: 100px;
     margin-top: 76px;
@@ -57,6 +59,7 @@
     margin-top: 35px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
 }
 .Login-input{
@@ -125,3 +128,36 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.forgot-password-btn, .Login-submit-btn {
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+  }
+  
+  .forgot-password-btn {
+    background-color: #f44336; /* Red color for 'Forgot Password' */
+  }
+  
+  .Login-submit-btn {
+    background-color: #008CBA; /* Blue color for 'Login' */
+  }
+
+  .login-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-button{
+    width: 100%;
+  }
+  
