@@ -27,7 +27,8 @@ function Header2() {
                     </button>
 
                     <div >
-                        <button className='faBell'><FontAwesomeIcon icon={faBell} />What's New</button>
+                        <button className='faBell'><FontAwesomeIcon icon={faBell}/>
+                        <div className='what'>What's New</div></button>
                     </div>
                 </div>
 

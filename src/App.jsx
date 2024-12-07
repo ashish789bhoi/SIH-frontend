@@ -1,39 +1,27 @@
-import React from 'react'
-import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react';
 
+const App = () => {
+  const [apiMessage, setApiMessage] = useState('');
 
-function App() {
+  useEffect(() => {
+    fetch('/api')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to connect to backend');
+        }
+        return response.json();
+      })
+      .then((data) => setApiMessage(data.message))
+      .catch((error) => console.error('Error:', error));
+  }, []);
 
-    return (
-        <div>
-            <nav>
-                <div className='logo'>
-                    <img src='/images/logo-main.png' alt="logo" />
-                </div>
-
-                <div className='search'>
-                    <input
-                        type="text"
-                        placeholder='Search'
-                        value=''
-                        className="search-input"
-                    />
-                    <button className='fa-search'>
-                    <FontAwesomeIcon 
-                        icon={faSearch}
-                    />
-                    </button>
-
-                    <div >
-                        <button className='faBell'><FontAwesomeIcon icon={faBell} />What's New</button>
-                    </div>
-                </div>
-
-            </nav>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>Frontend-Backend Connection Test</h1>
+      <p>{apiMessage || 'Loading...'}</p>
+    </div>
+  );
+};
 
 export default App;

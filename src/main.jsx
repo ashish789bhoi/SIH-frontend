@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header1 />
     <Header2 />
-    {/* <App /> */}
     <Login />
+    <App />
   </StrictMode>,
 );
