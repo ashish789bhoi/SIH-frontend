@@ -377,7 +377,7 @@ export function Schemes() {
           "rgba(230, 89, 59, 1)",
           "rgba(34, 197, 94, 1)",
         ],
-        borderColor:"White",
+        // borderColor:"White",
         borderWidth: 2,
       },
     ],
