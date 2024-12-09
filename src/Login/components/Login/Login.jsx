@@ -1,35 +1,24 @@
-import  { useState } from "react";
-
-import { useNavigate } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
 
-
 function Login() {
-  // State variables for username, password, and dropdown
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [dropdown, setDropdown] = useState("Subdivision");
-  const [loading, setLoading] = useState(false); // For loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Handler function for the Login button
   const handleLogin = async () => {
-    setLoading(true); // Set loading state
+    setLoading(true);
 
-    // Log values to check if function is called
-    console.log("Username:", username);
-    console.log("Password:", password);
-    console.log("Dropdown Selection:", dropdown);
-
-    // Check if all fields are valid
     if (username && password && dropdown !== "") {
       try {
-        // Send login request to the backend
-        const response = await fetch('http://localhost:5000/api/login', {
-          method: 'POST',
+        const response = await fetch("http://localhost:5000/api/login", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             username,
@@ -42,18 +31,22 @@ function Login() {
 
         if (data.success) {
           console.log("Login successful from frontend");
-          // Redirect based on the selected dropdown
-          if (dropdown === "HPM") {
-            navigate("/subdivision"); // React Router's navigate
+
+          // Pass user data and districtId
+          const districtId = data.districtId || "12345";
+          const stateToSend = { districtId, userData: data };
+
+          // Navigate based on dropdown
+          if (dropdown === "SP") {
+            navigate("/district", { state: stateToSend });
+          } else if (dropdown === "HPM") {
+            navigate("/subdivision", { state: stateToSend });
           } else if (dropdown === "SPM") {
-            navigate("/block"); // React Router's navigate
-          } else if (dropdown === "SP") {
-            navigate("/district"); // React Router's navigate
+            navigate("/block", { state: stateToSend });
           } else if (dropdown === "Admin") {
-            navigate("/admin"); // React Router's navigate
+            navigate("/admin", { state: stateToSend });
           }
         } else {
-          // Handle failure response (invalid credentials, role mismatch, etc.)
           alert(data.message);
         }
       } catch (error) {
@@ -64,7 +57,7 @@ function Login() {
       alert("Please fill all fields correctly.");
     }
 
-    setLoading(false); // Reset loading state
+    setLoading(false);
   };
 
   return (
@@ -78,27 +71,27 @@ function Login() {
           <div className="Login-input">
             <input
               type="text"
-              className="form-control" // Bootstrap input class
+              className="form-control"
               placeholder="Username"
-              value={username} // Bind state to input
-              onChange={(e) => setUsername(e.target.value)} // Update state on input
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="Login-input">
             <input
               type="password"
-              className="form-control" // Bootstrap input class
+              className="form-control"
               placeholder="Password"
-              value={password} // Bind state to input
-              onChange={(e) => setPassword(e.target.value)} // Update state on input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div>
             <select
-              className="form-select" // Bootstrap select class
-              value={dropdown} // Bind state to select
-              onChange={(e) => setDropdown(e.target.value)} // Update state on selection
-            >
+              className="form-select"
+              value={dropdown}
+              onChange={(e) => setDropdown(e.target.value)}
+            > <option value="HPM">Select role</option>
               <option value="HPM">Subdivision</option>
               <option value="SPM">Blocks</option>
               <option value="SP">District</option>
@@ -108,11 +101,9 @@ function Login() {
         </div>
 
         <div className="login-buttons">
-          {/* Forgot Password Button (Bootstrap Button) */}
           <button className="btn btn-danger mt-3 login-button">
             Forgot Password? Click Here!
           </button>
-          {/* Login Button (Bootstrap Button) */}
           <button className="btn btn-primary mt-3 login-button" onClick={handleLogin} disabled={loading}>
             {loading ? "Logging in..." : "Login"}
           </button>
