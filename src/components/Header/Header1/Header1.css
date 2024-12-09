@@ -4,17 +4,14 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
+/* Main nav container */
 nav1 {
     display: flex;
     justify-content: space-between;
     font-size: small;
-
-    /* max-width: 1280px; */
-    /* margin: 0 auto; */
-
 }
 
+/* Logo styles */
 .logo1 {
     margin-top: 0px;
 }
@@ -23,28 +20,24 @@ nav1 {
     width: 400px;
 }
 
+/* Divider */
 .divider {
     width: 1px;
-    /* Thin line width */
     height: 20px;
-    /* Line height */
     background-color: #A9A9A9;
-    /* Line color */
     margin: 0 10px;
-    /* Spacing around the line */
-
 }
 
-.Options  {
-
+/* Options Container */
+.Options {
     display: flex;
     align-items: center;
     cursor: pointer;
     color: #A9A9A9;
     transition: all 0.3s ease;
-    /* Smooth transition for underline */
 }
-.h1-text{
+
+.h1-text {
     position: relative;
     display: inline-block;
     color: #A9A9A9;
@@ -76,20 +69,59 @@ nav1 {
 .font-controls .font-btn:hover {
     text-decoration: underline;
     color: #A9A9A9;
-    border: none;
-    cursor: pointer;
 }
 
-
-
+/* Language dropdown */
 .language-dropdown {
-    /* padding: 10px; */
-    /* font-size: 16px; */
     border: 1px solid black;
     border-radius: 4px;
     background-color: #f8f9fa;
-    /* Light gray background */
     color: #A9A9A9;
-    /* Dark gray text */
     cursor: pointer;
+}
+
+/* Media Query for 1360px screens */
+@media (max-width: 1360px) {
+    /* Resize logo for mid-sized devices */
+    .logo1 img {
+        width: 350px;
+    }
+
+    nav1 {
+        justify-content: space-around;
+    }
+
+    .Options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .h1-text,
+    .font-controls .font-btn,
+    .language-dropdown {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for 480px screens */
+@media (max-width: 480px) {
+    /* Hide menu options for very small screens */
+    .Options {
+        display: none;
+    }
+
+    .h1-text,
+    .font-controls,
+    .language-dropdown {
+        display: none;
+    }
+
+    /* Resize logo to fit smaller mobile screens */
+    .logo1 img {
+        width: 250px;
+    }
+
+    nav1 {
+        justify-content: center;
+    }
 }

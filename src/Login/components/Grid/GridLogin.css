@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* IndustryAlliances.css */
+
+/* PostalSchemes.css */
+
+/* PostalSchemes.css */
+
+.postal-container {
+    display: flex;
+    margin-top: 15px;
+    background-color: #1a1a5e;
+    color: #fff;
+    padding: 70px;
+    align-items: center;
+    justify-content: center;
+    max-height: 700px; /* Increased main container height */
+    height: 100%;
+  }
+  
+  .buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-right: 60px;
+  }
+  
+  /* Fancy Buttons with Better Effects */
+  .tile-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 25px; /* Make the corners more rounded for a sleek design */
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Darker, more prominent shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 140px; /* Height remains unchanged */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Enhance hover with smoother depth effect */
+  .tile-button:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    background-color: #ff5b5b;
+    color: #fff;
+  }
+  
+  .description-container {
+    max-width: 500px;
+  }
+  
+  .description-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .description-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  

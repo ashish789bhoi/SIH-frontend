@@ -17,11 +17,35 @@
 }
 @media (max-width: 1366px) {
     .whole {
-        background-image: url(/public/images/main.jpg);
         margin-top: 30px;
         margin-left: 0;
         background-position: top center;
         background-size: cover;
+    }
+
+    .Login-Container {
+        width: 400px; /* Scaled width */
+        margin: 0 auto; /* Centered horizontally */
+        margin-top: 5px; /* Adjusted spacing */
+    }
+
+    .Login-text {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .Login-input,
+    .Login-input-dropdown {
+        width: 90%; /* Reduced width */
+    }
+
+    .Login-submit {
+        width: 70%; /* Proportional button width */
+        margin: 20px auto; /* Centered horizontally */
+    }
+
+    .forgot-password {
+        padding-left: 0;
+        text-align: center; /* Centered text */
     }
 }
 @media (max-width: 480px) {
@@ -149,80 +173,3 @@
 
 
 /* Media Query for 1360px screens */
-@media (max-width: 1360px) {
-    .Login-Container {
-      width: 400px;
-      /* margin-left: auto; */
-      margin-right: auto;
-    }
-  
-    .Login-text {
-      font-size: 24px;
-    }
-  
-    .Login-input,
-    .Login-input-dropdown {
-      width: 80%;
-    }
-  
-    .Login-submit {
-        width: 60%;
-        margin-left: inherit;;
-    }
-  
-    .forgot-password {
-      padding-left: 0;
-      margin-left: 37px;
-    }
-  }
-  
-  /* Media Query for 480px screens */
-  @media (max-width: 480px) {
-    .Login-Container {
-        width: 70%;
-        margin-top: 20px;
-        max-height: 365px;
-        margin-left: 33px;
-    
-    }
-    .underline{
-        width: 61px;
-        height: 3px;
-        background: black;
-        border-radius: 9px;
-        margin-left: 83px;
-    }
-  
-    .Login-text {
-        font-size: 18px;
-        justify-content: center;
-        align-items: center;
-        display: flex
-;
-        margin-left: -62px;
-    }
-  
-    .Login-input,
-    .Login-input-dropdown {
-      width: 66%;
-    }
-  
-    .Login-submit {
-        margin-top: 10px;
-        width: 58%;
-        /* justify-content: center; */
-        /* display: flex
-; */
-        /* align-items: center; */
-        margin-left: 61px;
-    }
-  
-    .forgot-password {
-        padding-left: 0;
-        margin-top: 15px;
-        justify-content: center;
-        display: flex
-;
-    }
-  }
-  

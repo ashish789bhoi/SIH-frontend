@@ -161,3 +161,36 @@
     width: 100%;
   }
   
+  @media (max-width: 1366px) {
+    .whole {
+        margin-top: 30px;
+        margin-left: 0;
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .Login-Container {
+        width: 400px; /* Scaled width */
+        /* Centered horizontally */
+        margin-top: 60px; /* Adjusted spacing */
+    }
+
+    .Login-text {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .Login-input,
+    .Login-input-dropdown {
+        width: 90%; /* Reduced width */
+    }
+
+    .Login-submit {
+        width: 70%; /* Proportional button width */
+        margin: 20px auto; /* Centered horizontally */
+    }
+
+    .forgot-password {
+        padding-left: 0;
+        text-align: center; /* Centered text */
+    }
+}

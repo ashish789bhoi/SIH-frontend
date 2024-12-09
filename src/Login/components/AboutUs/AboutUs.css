@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: "Poppins",sans-serif;
+}
+
+/* AboutUs.css */
+
+.about-us-container {
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Poppins",sans-serif;
+    background-image: url('Image1.png');
+    background-size: cover;
+    background-position: center;
+    max-height: 500px;
+    overflow-y: auto; /* Make content scrollable */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  }
+  
+  .about-us-heading {
+    font-size: 2rem;
+    color: #000; /* Use black color for heading */
+    text-align: left; /* Align heading to the left */
+    margin-left: 92px;
+    margin: 0 20%; /* Add margin to left and right */
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000; /* Use black color for content */
+    margin: 0 20%; /* Add margin to left and right */
+    margin-left: 92px;
+    margin-right: 92px;
+
+    margin-bottom: 15px;
+  }
+  
+  .about-us-content:last-child {
+    margin-bottom: 0;
+  }
