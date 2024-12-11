@@ -1,127 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-body {
-    font-family: "Poppins", sans-serif;
-}
-
-/* Main nav container */
-nav1 {
+.header1-container {
     display: flex;
     justify-content: space-between;
-    font-size: small;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fbfbfb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo styles */
-.logo1 {
-    margin-top: 0px;
-}
-
-.logo1 img {
-    width: 400px;
-}
-
-/* Divider */
-.divider {
-    width: 1px;
-    height: 20px;
-    background-color: #A9A9A9;
-    margin: 0 10px;
-}
-
-/* Options Container */
-.Options {
+.header1-left {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    color: #A9A9A9;
-    transition: all 0.3s ease;
 }
 
-.h1-text {
-    position: relative;
-    display: inline-block;
-    color: #A9A9A9;
-    text-decoration: none;
+.header1-logo {
+    width: 150px;
+    margin-right: 10px;
 }
 
-.h1-text::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #A9A9A9;
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
+.header1-text h1 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
 }
 
-.h1-text:hover::after {
-    width: 100%;
+.header1-text h2 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.header1-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header1-time {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
 }
 
 .font-controls .font-btn {
+    font-size: 14px;
     background: none;
-    color: #A9A9A9;
     border: none;
     cursor: pointer;
+    color: #007bff;
 }
 
-.font-controls .font-btn:hover {
-    text-decoration: underline;
-    color: #A9A9A9;
-}
-
-/* Language dropdown */
 .language-dropdown {
-    border: 1px solid black;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f9fa;
-    color: #A9A9A9;
-    cursor: pointer;
-}
-
-/* Media Query for 1360px screens */
-@media (max-width: 1360px) {
-    /* Resize logo for mid-sized devices */
-    .logo1 img {
-        width: 350px;
-    }
-
-    nav1 {
-        justify-content: space-around;
-    }
-
-    .Options {
-        display: flex;
-        gap: 10px;
-    }
-
-    .h1-text,
-    .font-controls .font-btn,
-    .language-dropdown {
-        font-size: 14px;
-    }
-}
-
-/* Media Query for 480px screens */
-@media (max-width: 480px) {
-    /* Hide menu options for very small screens */
-    .Options {
-        display: none;
-    }
-
-    .h1-text,
-    .font-controls,
-    .language-dropdown {
-        display: none;
-    }
-
-    /* Resize logo to fit smaller mobile screens */
-    .logo1 img {
-        width: 250px;
-    }
-
-    nav1 {
-        justify-content: center;
-    }
+    background-color: white;
 }
