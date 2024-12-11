@@ -1,0 +1,120 @@
+/* Container for the entire marquee */
+.improved-marquee-container {
+    display: flex;
+    align-items: center;
+    padding: 0px 0; /* Remove horizontal padding for better alignment with the left edge */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+  }
+  
+  /* Dedicated area for the "Updates" label and play/pause button */
+  .updates-section {
+    display: flex;
+    align-items: center;
+    background-color: #ed3f3e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+    flex-shrink: 0;
+    position: sticky; /* Keeps it attached to the left */
+    left: 0; /* Sticks to the left edge of the page */
+    z-index: 10; /* Ensures it stays above the scrolling text */
+  }
+  
+  .updates-label {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 10px; /* Ensures no visible gap */
+  }
+  
+  .play-pause-btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .play-pause-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Scrolling text container */
+  .scrolling-text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    animation: marquee-scroll 12s linear infinite;
+    white-space: nowrap;
+    margin-left: 16px; /* Ensure scrolling text starts after Updates section */
+  }
+  
+  .scrolling-text.paused {
+    animation-play-state: paused;
+  }
+  
+  .scrolling-text:hover {
+    animation-play-state: paused; /* Pause on hover */
+  }
+  
+  /* Keyframes for smooth scrolling */
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(100%); /* Start fully off-screen to the right */
+    }
+    10% {
+      transform: translateX(100%); /* Hold the position at the start */
+    }
+    100% {
+      transform: translateX(-100%); /* End fully off-screen to the left */
+    }
+  }
+  
+  /* Individual scroll items */
+  .scroll-item {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #50332c;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .scroll-item:hover {
+    color: #e67e22; /* Orange hover effect */
+    text-decoration: underline; /* Underline effect on hover */
+  }
+  
+  /* Dot separator */
+  .dot {
+    color: #7f8c8d;
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .improved-marquee-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .updates-section {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .scrolling-text {
+      width: 100%;
+    }
+  }
+  

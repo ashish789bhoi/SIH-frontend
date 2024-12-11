@@ -1,48 +1,50 @@
-import React from 'react'
-import './Header1.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
-
+import React, { useEffect, useState } from "react";
+import "./Header1.css";
 
 function Header1() {
+    const [currentTime, setCurrentTime] = useState("");
+
+    useEffect(() => {
+        const updateTime = () => {
+            const now = new Date();
+            const options = { year: "numeric", month: "long", day: "2-digit" };
+            const datePart = now.toLocaleDateString("en-US", options);
+            const timePart = now
+                .toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false })
+                .replace(":", ".");
+            setCurrentTime(`${datePart} | ${timePart} hrs`);
+        };
+        updateTime();
+        const interval = setInterval(updateTime, 60000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div>
-            <nav1>
-                <div className='logo1'>
-                    <img src='/images/h1logo.png' alt="logo" />
+        <header className="header1-container">
+            <div className="header1-left">
+                <img src="/images/h1logo.png" alt="UDAY Logo" className="header1-logo" />
+                <div className="header1-text">
+                    <h1>GOVERNMENT OF INDIA</h1>
+                    <h2>MINISTRY OF COMMUNICATIONS</h2>
                 </div>
-
-                <div class="Options">
-                    <div className='h1-text'>Skip to main content</div>
-                    <span class="divider"></span>
-                    <div className='h1-text'>Screen reader access</div>
-                    <span class="divider"></span>
-                    <div class="font-controls">
-                        <button id="increase-font" class="font-btn">A+</button>
-                        <button id="original-font" class="font-btn">A</button>
-                        <button id="decrease-font" class="font-btn">A-</button>
-                    </div>
-                    <span class="divider"></span>
-                    <div className="language-selection">
-                        <select className="language-dropdown">
-                            <option value="english" selected>
-                                English
-                            </option>
-                            <option value="spanish">Spanish</option>
-                            <option value="french">French</option>
-                            <option value="german">German</option>
-                        </select>
-                    </div>
-
-
-
-
+            </div>
+            <div className="header1-right">
+                <span className="header1-time">{currentTime}</span>
+                <div className="font-controls">
+                    <button className="font-btn">A-</button>
+                    <button className="font-btn">A</button>
+                    <button className="font-btn">A+</button>
                 </div>
-
-            </nav1>
-        </div>
-    )
+                <select className="language-dropdown">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="malayalam">Malayalam</option>
+                    <option value="magahi">Malayalam</option>
+                </select>
+            </div>
+        </header>
+    );
 }
 
 export default Header1;
