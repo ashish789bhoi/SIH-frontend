@@ -64,7 +64,7 @@ function Login() {
     <div className="whole">
       <div className="Login-Container">
         <div className="Login-Header">
-          <div className="Login-text">Sign Up</div>
+          <div className="Login-text">Sign In</div>
           <div className="underline"></div>
         </div>
         <div className="Login-inputs">
@@ -92,21 +92,26 @@ function Login() {
               value={dropdown}
               onChange={(e) => setDropdown(e.target.value)}
             > <option value="None">Select role</option>
-              <option value="HPM">Subdivision</option>
-              <option value="SPM">Blocks</option>
-              <option value="SP">District</option>
-              <option value="Admin">Admin</option>
+              <option value="SP">Divisional Post Office</option>
+              <option value="HPM">Head Post Office</option>
+              <option value="SPM">Sub Post Office</option>
+              {/* <option value="Admin">Administrator</option> */}
             </select>
           </div>
         </div>
 
         <div className="login-buttons">
-          <button className="btn btn-danger mt-3 login-button">
+          {/* <button className="btn btn-danger mt-3 login-button">
             Forgot Password? Click Here!
-          </button>
+          </button> */}
           <button className="btn btn-primary mt-3 login-button" onClick={handleLogin} disabled={loading}>
             {loading ? "Logging in..." : "Login"}
           </button>
+        </div>
+        <div className="forgot-password">
+          <a href="/forgot-password" className="forgot-link">
+            Forgot Password?
+          </a>
         </div>
       </div>
     </div>
