@@ -2,7 +2,7 @@ import React from "react";
 import Sidenav from "./components/Sidenav";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Main from "./components/Main";
-import { BottomNav } from "./components/Cards";
+// import { BottomNav } from "./components/Cards";
 // import { bgTop } from "./assets/images/bgTop.png";
 
 function DistrictApp() {
@@ -13,7 +13,7 @@ function DistrictApp() {
       </div> */}
       <Sidenav />
       <Main />
-      <BottomNav />
+      {/* <BottomNav /> */}
     </>
   );
 }

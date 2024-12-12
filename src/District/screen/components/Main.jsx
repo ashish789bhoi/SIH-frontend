@@ -1,17 +1,18 @@
-import React from "react";
-import {
-  Balance,
+// import React from "react";
+import {allstats} from "../components/Cards";
+const {
   PaymentLimit,
-  SpendORincome,
+  IncomeAndOccupationDetails,
+  AgeAndFemaleStats,
+  PredictedSchemeCard,
   Population,
-  Insurance,
-  Spendtrack,
-  Latextspend,
+  SchemeBeneficiaryList,
   Datastact,
-  Schemes,
-  Salary,
-  SchedulPayement,
-} from "../components/Cards";
+  TopSchemes,
+  Insurance,
+  Partners,
+  ImportantInformation
+} = allstats();
 
 export default function Main() {
   return (
@@ -24,23 +25,23 @@ export default function Main() {
         <div className="Maindata">
           {/* data first side */}
           <div className="first-child ">
-            <Balance />
+            <PredictedSchemeCard />
             <PaymentLimit />
-            <SpendORincome />
-            <Spendtrack />
+            <IncomeAndOccupationDetails />
+            <AgeAndFemaleStats />
             <Population />
-            <Latextspend />
+            <SchemeBeneficiaryList />
 
-            <Salary />
+            <Partners />
           </div>
           {/* data second side */}
           <div className="last-child">
             <Datastact />
             
-            <Schemes />
+            <TopSchemes />
             <Insurance />
 
-            <SchedulPayement />
+            <ImportantInformation />
           </div>
         </div>
       </div>
